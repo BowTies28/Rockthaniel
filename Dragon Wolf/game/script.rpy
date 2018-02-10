@@ -6,9 +6,10 @@ define n = Character("Nathaniel")
 define r = Character("Rockhopper")
 define fm = Character("Fish Man")
 #Supporting Characters
+define t = Character ("Tita")
 define p = Character("Pheonyx")
 #Extra bitches
-define k = Character("Fast Food Worker")
+define fastfood = Character("Fast Food Worker")
 define whomst = Character("???")
 
 # The game starts here.
@@ -44,7 +45,7 @@ label start:
     scene bg black
     with fade
     
-    "The phone lights up and vibrates, “Pheonyx is calling” is displayed on his phone as he stumbles out of bed."
+    "The phone lights up and vibrates, Pheonyx is calling is displayed on his phone as he stumbles out of bed."
     
     play sound "phone vibrate.mp3"
     
@@ -197,7 +198,7 @@ label start:
     show nate normal
     with easeinleft
     
-    k "Hi welcome to Bhili's"
+    fastfood "Hi welcome to Bhili's"
     
     n "Can I get uhh..."
     
@@ -212,7 +213,7 @@ label start:
     
     n "Oh you know! Same ol' same ol'."
     
-    k "Sir... Your order???"
+    fastfood "Sir... Your order???"
     
     n "Oh! Yeah sorry, my bad. Two big boys please!"
     
@@ -222,13 +223,13 @@ label start:
     
     n "Oh! Can I get onion rings for one my big boys?"
     
-    k "{i}sigh{/i} Yeah sure whatever. Your total is going to be $69.42"
+    fastfood "{i}sigh{/i} Yeah sure whatever. Your total is going to be $69.42"
     
     n "{b}{i}Jeez that’s a lot… but he must be starving.{/i}{/b}"
     
     whomst "Can you stop FUCKING overcharging people just say it's $16.92"
     
-    k "Okay fine it's $16.92."
+    fastfood "Okay fine it's $16.92."
     
     n "{b}{i}Still a lot... Oh well{/i}{/b}."
     
@@ -331,7 +332,7 @@ label start:
     
     show expression "nate normal" as nate
     
-    n "Hey there… Don’t cry. My name’s Nathaniel."
+    n "Hey there… Don’t cry. My name’s Nathaniel, most people call me Nate."
     
     fm "Na-than-ie-a...l?"
     
@@ -375,7 +376,7 @@ label start:
     
     fm "Ahh~ That makes sense."
     
-    scene bg kithen
+    scene bg kitchen
     with fade
     
     show rock happy at left
@@ -473,5 +474,316 @@ label start:
     
     "Nate’s eyes began to close as he yawned from exhaustion. He leaned over in the water as if he was going to get out but fell asleep. The fish man noticing this, picked up the werewolf and placed him on his stomach and pet Nate’s head as he also fell asleep."
     
- 
+    jump chapter2
+    
+###########################################################################################################################################################################
+###########################################################################################################################################################################
+###########################################################################################################################################################################
+
+label chapter2:
+    
+    scene bg beach
+    with fade
+
+    show nate happy at left
+
+    #play sound water splash
+
+    "Water gently runs along the shore"
+
+    n "The ocean, it’s so beautiful…"
+
+    "The birds chirp in the sky. Nate looks around and sees the fish man standing on the water.."
+
+    show rock happy at right
+
+    n "Hey… What’s your name?"
+
+    "He runs towards the fish man, with water submerging his feet."
+
+    n "Hey!"
+
+    fm "Good puppy!"
+    
+    
+    
+
+    scene bg bathroom
+    with hpunch
+
+    show nate tired at left
+
+    show rock happy at right
+
+    #play sound water splash
+
+    "Natel wakes up on the fish man’s stomach, with the man gentle patting his head"
+
+    fm "Good puppy!~"
+
+    n "Fuck… How long was I?"
+
+    fm "The sun is up now… So…"
+
+    n "Great I slept on him…"
+
+    "Their stomach rumbles."
+
+    n "We should go get some food."
+
+    n "Shit that’s right we don’t have any food in the house…"
+
+    n "Hey fish- I mean buddy, I’m going to go out to do some grocery shopping and get us some food."
+
+    fm "Can I come?!"
+
+    n "Sure, just don’t do anything weird."
+
+    fm "Like… What?"
+
+    n "Umm… Try not to break things for starters."
+    
+    fm "Got it!"
+
+    "They both get ready to leave the house. Nate gets his bags and shuts the for behind them"
+
+
+
+    scene bg grocery outside
+
+    show nate normal at left
+
+    show rock normal at right
+
+    n "So this is a grocery store."
+
+    show expression "rock confused" as rock
+
+    fm "Gros...sssy store?"
+
+    n "{b}{i}Close enough…{/i}{/b}"
+
+    n "Yeah you buy food and stuff from here"
+
+    fm "Like…. Oh nyan rings?"
+
+    n "Kind of, you but the ingredients to make onion rings."
+
+    show expression "rock happy" as rock
+
+    fm "Ooh!"
+
+    n "Maybe we'll be able to find something you might like in here or something may jog your memory"
+
+    scene bg grocery vegetables
+    with slideright
+
+    show rock normal at right
+
+    "The fish man grabs a bundle of broccoli from the stands"
+
+    fm "Note o'neil! Look at this tiny tree!"
+
+    show nate normal at left
+    with easeinleft
+
+    n "That's not a tree buddy, that's called broccoli. They're really good, do you want me to cook some for you?"
+
+    fm "Oooh! Yes please!"
+
+    "The fish man grabs a eggplant from the stand and compares it with Nate"
+
+    fm "Natmeal, I remember seeing this in your books the man shoved in the girl’s-."
+
+    show expression "nate blush" as nate
+
+    "He looks at the man comparing him with the eggplant as he blushes and grabs it from him."
+
+    n "O-oh, uh these are eggplants! I can cook them with the broccoli if you want."
+
+    fm "So it’s not something you put in a g-"
+
+    n "Nononono! It’s really good I’ll show you when we get home!"
+
+    n "I think that’s enough vegetables. Let’s go to the fruit section to get some snacks!~"
+
+    scene bg grocery fruits
+    with slideright
+
+    show rock happy at right
+
+    fm "DICK!"
+
+    show nate embarrassed at left
+    with easeinleft
+
+    "The fishman points at the fruit basket with a banana and strawberries at it’s base."
+
+    "Start"
+
+    fm "Natanael look! It’s like your bo-"
+
+    "Nate runs over with his face bright as the sunset attempting to cover the fishmans mouth and leans in to whisper to him."
+
+    n "Don’t say dick in public! It’s bad!"
+
+    "He muffles through his hand as Nate moves his hand away."
+
+    fm "But it looks like a dick! Want to check mine?"
+
+    "An image of a hamster eating a banana pops into Nate’s head"
+
+    n "Nonononono! It’s okay I know how they look like."
+
+    fm "Why do you always do that?"
+
+    n "Do what…?"
+
+    fm "Your face is always turns red."
+
+    n "Uh… I’m not… sure either…"
+
+    fm "Ooooh."
+
+    n "Do… you want that though, the thing shaped like the…"
+
+    fm "What are they?"
+
+    n "The long yellow thingy is called a banana and the small red things are called strawberries."
+
+    n "You can use them to make things called smoothies."
+
+    fm "Smoothly?"
+
+    n "Yeah they’re like cold… and.. stuff…"
+
+    fm "If it’s good!~"
+
+    n "Okay that should be good for fruits. We should probably get some meat."
+
+    scene bg grocery meats
+    with slideright
+    
+    show rock normal at right
+
+    show nate normal at left
+
+    "They walk into the meat aisle, bustling with butchers cutting and moving the lumps of meat around."
+
+    fm "Nathoniel listen! It’s like what the noise from your books!"
+
+    n "{b}{i}Why does he keep referencing the god damn….{/i}{/b}"
+
+    fm "Is this what they mean by, Beating your meat?"
+
+    n "N-nono… That’s… something else."
+
+    fm "Then what does bea-"
+
+    n "I’ll tell you when we get home…"
+
+    show expression "rockh confused" as rock
+
+    "Nate eyes a pack of steaks and grabs it in his hand while the fish man tilts his head in confusion."
+
+    fm "Are… you going to beat it or are we going to beat it together?"
+
+    show expression "nate flustered" as nate
+
+    "Nates tomato red face looks at him as he tilts his head like a confused puppy."
+
+    n "Don't worry about it for now! I'll show you what it means later!"
+
+    fm "I can't wait to see you beat meat!"
+
+    n "I-I mean tell you!"
+
+    fm "No show?"
+
+    n "N-no…"
+
+    n "A-anyways I think we have all the food we need, I'll go grab some stuff for the bathtub."
+
+    "Nate skitters out of the meat section and grabs the remaining items of his list then they both head to the checkout."
+
+    scene bg grocery checkout
+
+    show tita normal at left
+
+    show nate normal at center
+
+    with easeinright
+
+    show rock normal at right
+
+    with easeinright
+
+    t "Oh~ Nate how are you today?~"
+
+    n "Good Tita! How about you?"
+
+    "Tita leans in and points with her mouth at the fish man and whispers to Nate."
+
+    t "Hay naku(Oh dear)! Nate he your boyfriend diba(right)?"
+
+    n "N-no its a long story Tita…"
+
+    t "Bakit ganon(Why is that)? He is very handsome!"
+
+    "She leans back and looks at the fish man."
+
+    t "Sir are you Nate’s boyfriend?"
+
+    fm "Well Natangle is a boy and he calls me buddy a lot so… Yeah! I am Nate's boyfriend!"
+
+    "Tita laughs." 
+
+    t "I see! My name is Tita what is your name sir?"
+
+    fm "Uh… I don't know…"
+
+    "Nate leans in and whispers to Tita."
+
+    n "Tita I think my friend lost his memories so I'm taking care of him until he remembers them."
+
+    t "Anyare(What happened)?"
+
+    n "I'm not sure really I found him washed up on the beach."
+
+    "He grabs the fish man's hands."
+
+    n "Hey don't worry about your name buddy in sure you'll remember it soon."
+
+    t "Anak it will be $53.70!"
+
+    #play sound card reader beep
+
+    "Nate pays with his card causing the card reader to beep, startling the fish man."
+
+    fm "Nat!"
+
+    "He grabs Nate close shaking slightly."
+
+    n "Oh it's a card reader it's how I pay for my stuff. Can you grab our bags for me?"
+
+    "The fish man nods smiling and walks over to the full bags and picks them up effortlessly."
+
+    t "Good bye boys!~"
+
+    n "Bye Tita!~"
+
+    fm "Bye ma’am!"
+
+    show nate normal:
+            ease 1.0 offscreenleft
+
+    show rock normal:
+            ease 1.0 offscreenleft
+
+    "As they leave Tita waves goodbye and looks at the whispers to herself."
+
+    "They are so cute together!~ Sayang (What a waste) they make a good couple."
+
+
+    
     return

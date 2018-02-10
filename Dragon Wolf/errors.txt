@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 435: end of line expected.
-    with slide left
-               ^
+File "game/script.rpy", line 9: invalid syntax
+    Character "Tita"
+                    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919
