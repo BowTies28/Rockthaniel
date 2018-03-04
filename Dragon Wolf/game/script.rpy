@@ -8,6 +8,8 @@ define fm = Character("Fish Man")
 #Supporting Characters
 define t = Character ("Tita")
 define p = Character("Pheonyx")
+define k = Character("Kurou")
+define a = Character("Apollo")
 #Extra bitches
 define fastfood = Character("Fast Food Worker")
 define whomst = Character("???")
