@@ -2,17 +2,21 @@
 
 #Character Names
 #Main Characters
-define n = Character("Nathaniel")
-define r = Character("Rockhopper")
-define fm = Character("Fish Man")
+define n = Character("Nathaniel", color = "#1AA9E3")
+define r = Character("Rockhopper", color = "#2EDFD7")
+define fm = Character("Fish Man", color = "#2EDFD7")
 #Supporting Characters
-define t = Character ("Tita")
-define p = Character("Pheonyx")
-define k = Character("Kurou")
+define t = Character ("Tita", color = "#CB2D2D")
+define p = Character("Pheonyx", color = "#9DD633")
+define k = Character("Kurou", color = "E1783B")
 define a = Character("Apollo")
 #Extra bitches
-define fastfood = Character("Fast Food Worker")
-define whomst = Character("???")
+define fastfood = Character("Fast Food Worker", color = "E1783B")
+define whomst = Character("???", color = "#CACACA")
+
+#Choice Variable, determinds your standing with the big boy
+define pathNum = 0
+
 
 # The game starts here.
 
@@ -22,7 +26,12 @@ label start:
 #Start of Chapter 1
 #################################################################################################################
 
+    scene cg chapter1
+    
+    pause 3.0
+    
     scene bg black
+    with fade
     
     "Light peeks through the windows as birds chirp outside moving the branches brushing against the window. Nathaniel’s phone alarm rings."
     
@@ -76,7 +85,7 @@ label start:
 #Guild Hall Scene where Nathaniel picks up hunt slip, introduces Pheonyx    
 #################################################################################################################
     
-    scene bg guild hall
+    scene bg guildhall
     with fade
     
     show nate flustered at left
@@ -102,7 +111,7 @@ label start:
     show Pheonyx dicks:
         ease 1.0 offscreenright
         
-    n "'Get rid of the great crabs at Blackrock Beach' Well… at least the venue isn’t terrible."
+    n "'Get rid of the great crabs at Blackrock Beach' Well... at least the venue isn’t terrible."
     
     n "This is what I get for sleeping in I guess, off to Blackrock Beach I go..."
     
@@ -113,13 +122,13 @@ label start:
 #Blackrock Beach Scene where Nathaniel finds Rockhoppers hot but unconcious body on the floor and brings him home        
 #################################################################################################################
         
-    scene BlackrockBeachBG
+    scene bg beach
     with fade
     
     show nate normal at left
     with easeinleft
     
-    show darksoulscrab at right
+    show crab at right
     
     "Nathaniel pulls back on the bow launching his arrow slicing through the air and striking down a crab."
 
@@ -127,17 +136,17 @@ label start:
     
     "He runs around killing all of the crabs in sight, making them drop to the floor."
     
-    scene hop1
+    scene cg hopStory1
     with dissolve
    
     "Amidst the giant crab corpses that litter the shower, a slight glimmer on the shore catches Nathaniel’s eye."
 
-    scene hop2
+    scene cg hopStory2
     with dissolve
     
-    n "Is… that a body?"
+    n "Is... that a body?"
     
-    scene hop3
+    scene cg hopStory3
     with dissolve
     
     "Nathaniel runs over to the the man and shakes the body."
@@ -146,7 +155,7 @@ label start:
 
     "The fish man opens his eyes and takes a glance at Nathaniel and faints."
     
-    n "That’s not good… At least he’s alive so that’s something. I’ll take him home but I can’t do it in this body I hate switching…"
+    n "That’s not good... At least he’s alive so that’s something. I’ll take him home but I can’t do it in this body I hate switching..."
 
     "owo sound effect"
     
@@ -156,14 +165,14 @@ label start:
 # Nate brings Hops home and puts him in his tub to dry him also theres no food so he goes out to [fastfoodname]
 #################################################################################################################
 
-    scene bathroom
+    scene bg bathroom
     with fade
     
     show nate embarassedblush
     
     "Nathaniel lays down the shinning wet body that barely fits in the tub."
     
-    n " I hope he doesn’t mind waking up in a bathtub…"
+    n " I hope he doesn’t mind waking up in a bathtub..."
     
     "He is a fish.. I think? Maybe I should fill up the tub just in case."
     
@@ -171,7 +180,7 @@ label start:
     
     n " I hope he’s okay and okay with waking up wet. He’ll probably be hungry when he wakes up. Who knows how long he’s been knocked out."
     
-    scene kitchen
+    scene bg kitchen
     with dissolve
     
     show nate embarassedblush
@@ -191,10 +200,10 @@ label start:
 #Nate goes to [foodplace] and orders food for 2, Pheonyx notices and asks him questions about relationships allowing time for hops to fuck up the house
 ########################################################################################################################################################  
 
-    scene restaurant
+    scene bhilis inside
     with fade
 
-    show kuroudick at right
+    show kurou normal at right
     with easeinright
 
     show nate normal
@@ -227,7 +236,7 @@ label start:
     
     fastfood "{i}sigh{/i} Yeah sure whatever. Your total is going to be $69.42"
     
-    n "{b}{i}Jeez that’s a lot… but he must be starving.{/i}{/b}"
+    n "{b}{i}Jeez that’s a lot... but he must be starving.{/i}{/b}"
     
     whomst "Can you stop FUCKING overcharging people just say it's $16.92"
     
@@ -235,7 +244,7 @@ label start:
     
     n "{b}{i}Still a lot... Oh well{/i}{/b}."
     
-    show kuroudick:
+    show kurou normal:
         ease 0.5 offscreenright
         
     show nate normal:
@@ -261,7 +270,6 @@ label start:
     
     p "Well you're not gonna get a catch like that! Oh well, you'll find someone I'm sure. I gotta get going I have another hunt slip to finish! I'll see you later!"
 
-
     show pheonyx dicks:
         ease 1.0 offscreenleft
         
@@ -271,7 +279,7 @@ label start:
 #Nate hears shit outside the house and it gets fucked so he goes in and notices the house is fucked then meets Rockhopper known only as fish man for the time being
 ###################################################################################################################################################################
 
-    scene BG House OutsideN
+    scene bg houseOutN
     
     "As Nathaniel approaches the house, loud banging and crashing noises come from the house."
     with hpunch
@@ -282,7 +290,7 @@ label start:
     
     "Hastily, he opens up the door and crashes in."
     
-    scene HouseFucked
+    scene bg houseFucked
     
     fm "Hello~?"
     
@@ -292,7 +300,7 @@ label start:
     
     fm "He...llo? Ah- something smells good..."
     
-    n "My house…"
+    n "My house..."
     
     fm "You’re that cat from the beach, right?"
     
@@ -316,7 +324,7 @@ label start:
     
     show expression "nate confused" as nate
     
-    n "Do… you not know where you are?"
+    n "Do... you not know where you are?"
     
     show expression "rock sad" as rock
     
@@ -326,7 +334,7 @@ label start:
     
     "The fish man begins to look away nervously, tears well up in his eyes"
     
-    fm "I-I… can’t remember…"
+    fm "I-I... can’t remember..."
     
     n "{b}{i}He lost his memories...{/i}{/b}"
     
@@ -334,7 +342,7 @@ label start:
     
     show expression "nate normal" as nate
     
-    n "Hey there… Don’t cry. My name’s Nathaniel, most people call me Nate."
+    n "Hey there... Don’t cry. My name’s Nathaniel, most people call me Nate."
     
     fm "Na-than-ie-a...l?"
     
@@ -390,7 +398,7 @@ label start:
     
     show expression "rock normal" as rock
     
-    fm "I’m not sure… I can remember… the trees being orange? Yes- that's right, they must have just started to turn on the mainland."
+    fm "I’m not sure... I can remember... the trees being orange? Yes- that's right, they must have just started to turn on the mainland."
     
     show expression "nate concerned" as nate
     
@@ -404,9 +412,9 @@ label start:
     
     n "Also what do you mean about the mainland?"
     
-    fm "Ah well-... The largest island...? It was dry I did not like it… I remember spending most of my time in the ocean."
+    fm "Ah well-... The largest island...? It was dry I did not like it... I remember spending most of my time in the ocean."
     
-    n "{b}{i}So he is a fish… thing… person…{/b}{/i}"
+    n "{b}{i}So he is a fish... thing... person...{/b}{/i}"
     
     n "Well I don’t want you getting hurt so you can stay with me until you start remembering stuff again. First things first we need to fix up the house, then we can give you a good bath."
     
@@ -424,22 +432,22 @@ label start:
     
     n "Anyways what happened when I was gone this place looks like it was wrecked."
     
-    scene hop1
+    scene cg hopOnBeach1
     with slideup
     
-    fm "Well.. I woke up confused, so I figured I would check out my surrounds… but the ground wasn't like sand or the rock so it took me some time to get my footing..."
+    fm "Well.. I woke up confused, so I figured I would check out my surrounds... but the ground wasn't like sand or the rock so it took me some time to get my footing..."
     
-    scene hop2
+    scene cg hopOnBeach2
     with slideleft
     
-    fm "There was some creature… It was so small, I wanted to ask it a question but it got away from me"
+    fm "There was some creature... It was so small, I wanted to ask it a question but it got away from me"
     
-    scene hop3
+    scene cg hopOnBeach3
     with slideleft
     
     fm "Ah-! I found some books with pictures in them I thought they would help me figure out where I’d ended up..."
     
-    n "{b}{i}They better have not been…{/b}{/i}"
+    n "{b}{i}They better have not been...{/b}{/i}"
     
     fm "...It’s nice to see people in love but I’m still confused what they were doing and what all that mi-"
     with vpunch
@@ -472,7 +480,7 @@ label start:
     
     fm "Your a good dog, you’ve earned your rest haven’t you?"
     
-    n "{i}yawn{/i} I did didn’t I? I gotta get… to bed…"
+    n "{i}yawn{/i} I did didn’t I? I gotta get... to bed..."
     
     "Nate’s eyes began to close as he yawned from exhaustion. He leaned over in the water as if he was going to get out but fell asleep. The fish man noticing this, picked up the werewolf and placed him on his stomach and pet Nate’s head as he also fell asleep."
     
@@ -480,26 +488,32 @@ label start:
     
 ###########################################################################################################################################################################
 ###########################################################################################################################################################################
-###########################################################################################################################################################################
-
+######################################################################
+# Chapter 2 Start / Dream Sequence
+######################################################################
 label chapter2:
     
-    scene bg beach
-    with fade
-
+    scene cg chapter2:
+    with Fade(3.0, 1.0, 0.5)
+    
+    pause 3.0
+    
+    scene bg beach:
+    with Fade(3.0, 1.0, 0.5)
+    
     show nate happy at left
 
     #play sound water splash
 
     "Water gently runs along the shore"
 
-    n "The ocean, it’s so beautiful…"
+    n "The ocean, it’s so beautiful..."
 
     "The birds chirp in the sky. Nate looks around and sees the fish man standing on the water.."
 
     show rock happy at right
 
-    n "Hey… What’s your name?"
+    n "Hey... What’s your name?"
 
     "He runs towards the fish man, with water submerging his feet."
 
@@ -507,33 +521,34 @@ label chapter2:
 
     fm "Good puppy!"
     
-    
-    
+######################################################################
+# Nate Wakes up from a sleep
+######################################################################
 
     scene bg bathroom
     with hpunch
 
     show nate tired at left
-
+    
     show rock happy at right
 
     #play sound water splash
 
-    "Natel wakes up on the fish man’s stomach, with the man gentle patting his head"
+    "Nate wakes up on the fish man’s stomach, with the man gentle patting his head"
 
     fm "Good puppy!~"
 
-    n "Fuck… How long was I?"
+    n "Fuck... How long was I?"
 
-    fm "The sun is up now… So…"
+    fm "The sun is up now... So..."
 
-    n "Great I slept on him…"
+    n "Great I slept on him..."
 
     "Their stomach rumbles."
 
     n "We should go get some food."
 
-    n "Shit that’s right we don’t have any food in the house…"
+    n "Shit that’s right we don’t have any food in the house..."
 
     n "Hey fish- I mean buddy, I’m going to go out to do some grocery shopping and get us some food."
 
@@ -541,15 +556,17 @@ label chapter2:
 
     n "Sure, just don’t do anything weird."
 
-    fm "Like… What?"
+    fm "Like... What?"
 
-    n "Umm… Try not to break things for starters."
+    n "Umm... Try not to break things for starters."
     
     fm "Got it!"
 
     "They both get ready to leave the house. Nate gets his bags and shuts the for behind them"
 
-
+######################################################################
+# Grocery Store Scene Dick Jokes haha
+######################################################################
 
     scene bg grocery outside
 
@@ -563,11 +580,11 @@ label chapter2:
 
     fm "Gros...sssy store?"
 
-    n "{b}{i}Close enough…{/i}{/b}"
+    n "{b}{i}Close enough...{/i}{/b}"
 
     n "Yeah you buy food and stuff from here"
 
-    fm "Like…. Oh nyan rings?"
+    fm "Like.... Oh nyan rings?"
 
     n "Kind of, you but the ingredients to make onion rings."
 
@@ -621,8 +638,6 @@ label chapter2:
 
     "The fishman points at the fruit basket with a banana and strawberries at it’s base."
 
-    "Start"
-
     fm "Natanael look! It’s like your bo-"
 
     "Nate runs over with his face bright as the sunset attempting to cover the fishmans mouth and leans in to whisper to him."
@@ -639,15 +654,15 @@ label chapter2:
 
     fm "Why do you always do that?"
 
-    n "Do what…?"
+    n "Do what...?"
 
     fm "Your face is always turns red."
 
-    n "Uh… I’m not… sure either…"
+    n "Uh... I’m not... sure either..."
 
     fm "Ooooh."
 
-    n "Do… you want that though, the thing shaped like the…"
+    n "Do... you want that though, the thing shaped like the..."
 
     fm "What are they?"
 
@@ -657,7 +672,7 @@ label chapter2:
 
     fm "Smoothly?"
 
-    n "Yeah they’re like cold… and.. stuff…"
+    n "Yeah they’re like cold... and.. stuff..."
 
     fm "If it’s good!~"
 
@@ -674,21 +689,21 @@ label chapter2:
 
     fm "Nathoniel listen! It’s like what the noise from your books!"
 
-    n "{b}{i}Why does he keep referencing the god damn….{/i}{/b}"
+    n "{b}{i}Why does he keep referencing the god damn....{/i}{/b}"
 
     fm "Is this what they mean by, Beating your meat?"
 
-    n "N-nono… That’s… something else."
+    n "N-nono... That’s... something else."
 
     fm "Then what does bea-"
 
-    n "I’ll tell you when we get home…"
+    n "I’ll tell you when we get home..."
 
-    show expression "rockh confused" as rock
+    show expression "rock confused" as rock
 
     "Nate eyes a pack of steaks and grabs it in his hand while the fish man tilts his head in confusion."
 
-    fm "Are… you going to beat it or are we going to beat it together?"
+    fm "Are... you going to beat it or are we going to beat it together?"
 
     show expression "nate flustered" as nate
 
@@ -702,18 +717,19 @@ label chapter2:
 
     fm "No show?"
 
-    n "N-no…"
+    n "N-no..."
 
     n "A-anyways I think we have all the food we need, I'll go grab some stuff for the bathtub."
 
     "Nate skitters out of the meat section and grabs the remaining items of his list then they both head to the checkout."
 
     scene bg grocery checkout
+    with Dissolve (1.0)
 
     show tita normal at left
+    with easeinleft
 
     show nate normal at center
-
     with easeinright
 
     show rock normal at right
@@ -728,7 +744,7 @@ label chapter2:
 
     t "Hay naku(Oh dear)! Nate he your boyfriend diba(right)?"
 
-    n "N-no its a long story Tita…"
+    n "N-no its a long story Tita..."
 
     t "Bakit ganon(Why is that)? He is very handsome!"
 
@@ -736,13 +752,13 @@ label chapter2:
 
     t "Sir are you Nate’s boyfriend?"
 
-    fm "Well Natangle is a boy and he calls me buddy a lot so… Yeah! I am Nate's boyfriend!"
+    fm "Well Natangle is a boy and he calls me buddy a lot so... Yeah! I am Nate's boyfriend!"
 
     "Tita laughs." 
 
     t "I see! My name is Tita what is your name sir?"
 
-    fm "Uh… I don't know…"
+    fm "Uh... I don't know..."
 
     "Nate leans in and whispers to Tita."
 
@@ -785,7 +801,494 @@ label chapter2:
     "As they leave Tita waves goodbye and looks at the whispers to herself."
 
     "They are so cute together!~ Sayang (What a waste) they make a good couple."
+######################################################################
+# Apollo Encounter / Bhili’s Encounter / Kurou Encounter / Rockhopper gets his name
+######################################################################
+   
+    scene bg bhilis outside
+    with Dissolve (1.0)
 
+    show nate normal at left
+    show rock normal at right
 
+    "On the way home both of their stomachs growl loudly."
+
+    r "My tummy hurty..."    
+
+    n "You know, I’m not gonna lie buddy I’m kinda hungry and I’m too lazy to cook..."
     
+    r "What then?"
+
+    n "Do you want burgers? We’re in front of the Bhili’s."
+
+    r "Oh!~ Nyan rings?"
+
+    n "We can get those too. Come on lets go get food."
+    
+    scene bg bhilis inside
+    with dissolve
+
+    show nate normal at center
+    show rock normal at left
+
+    fastfood "Hi Welcome to Bhili’s!"
+
+    show kurou normal at right
+    with easeinright
+
+    fastfood "Hey I remember you from yesterday!"
+    
+    n "O-Oh you did?"
+
+    fastfood "Yeah you ordered two meals right? For your boyfriend I assume?"
+
+    "He raises and lowers his eyebrows really fast looking at the fish man."
+
+    show expression "nate flustered" as nate
+
+    "Nate looks away embarrassed and begins to stumble on his words."    
+
+    fastfood "Isn’t it?"
+    
+    "The fast food worker leans in and places his hand at the bottom his chin and turns his head towards him."
+
+    fastfood "Or... Do you have someone else in mind?"
+
+    "Nate’s face lights up red yet again as he stares into the eyes of the fast food worker."
+
+    fastfood "Nah I’m just kiddin! What can I get ya?"
+
+    n "Can I-I g-get uhhh...."
+    
+    fm "On you rings!"
+    
+    fastfood "On me whats?"
+
+    show expression "nate normal" as nate
+
+    n "Onion rings, he means onion rings."
+
+    fm "Yeah that!"
+
+    fastfood "Oookay..."
+
+    n "Can you get us 2 big boy meals? Please?"
+
+    fastfood "Of course! That’ll be $42.30!"
+
+    n "Wha-"
+
+    fastfood "Nah I’m just joking!~ Your order will be with you shortly!"
+
+    n "Thanks uhh..."
+
+    k "Kurou, name’s Kurou."
+
+    n "Nate. Nice to meet you Kurou.~"
+    
+    show kurou normal:
+        ease 1.0 offscreenright
+
+    "They sit at table waiting for their order until Nate notices someone staring at the fish man."
+
+    show expression "nate concerned" as nate
+    
+    n "Hey buddy."
+    
+    fm "Yes Noot?"
+
+    n "I think... Someone’s staring at you."
+
+    fm "Do I look that nice?"
+
+    "The man gets up from his table and walks towards them."
+
+    n "Uh... Can I he-"
+
+    show apollo normal at right
+    with easeinright
+
+    whomst "I see you’re one of THOSE dragons yes?"
+
+    "He leans over and props his head up on the table with his arm and points at the fish man."
+
+    whomst "THE dragons from the Great Barrier Reef yes?"
+    
+    show expression "rock confused" as rock
+
+    fm "Me?"
+
+    whomst "Yes!"
+
+    fm "The great bingo reed?"
+
+    whomst "I assume you HAVE been there before correct?"
+
+    fm "Can’t say I remember!"
+
+    n "Excuse me sir ca-"
+
+    whomst "Look BUCKO I know a rock hopper dragon when I see one."
+
+    n "Wait you know what he is?"
+
+    whomst "Of course I know what he is why?"
+
+    fm "Rock... Hopper..?"
+
+    "The fish man looked at the man."
+
+    show expression "rock happy" as rock
+
+    r "That’s who I am! I’m Rockhopper!"
+
+    whomst "Wait no-"
+
+    r "Nat! That’s who I am Rockhopper!"
+    
+    n "If you want to be called that buddy then sure, Rockhopper it is!"
+    
+    whomst "Wai-"
+
+    r "Do you hear that sir?! My name is Rockhopper!"
+
+    a "Actually, my name is Apollo."
+
+    k "Hey Nate your food’s ready!"
+
+    n "Hey Rockhopper, would you mind picking up the food for us?"
+
+    r "Anything for you Nate!"
+
+    show rock normal:
+        ease 1.0 offscreenright
+
+    n "Apollo right? What do you know about Rockhopper?"
+
+    a "Anything really."
+
+    n "So what exactly is he?"
+
+    a "From the looks of it he’s a Rockhopper dragon, most of them live in the Great Barrier Reef."
+
+    n "Like, the one in Australia?"
+
+    a "No the one in Canada, of course the one in Australia you imbecile."
+
+    n "{b} {i} So those months he was missing... {/i}{/b}"
+
+    n "Sorry about my friend, he lost his memory so he doesn’t remember much."
+
+    a "Really? Interesting... Not even his own name I suppose?"
+
+    n "Yeah..."
+
+    r "Nate!"
+
+    a "Look I’d love to talk to you more cutie but I have to leave soon, boo is waiting for me. Give me your phone I’ll add myself as a contact."
+
+    "Nate hands Apollo his phone as he adds himself as a contact."
+
+    a "See you around hot stuff!"
+
+    show apollo normal:
+        ease 1.0 offscreenleft
+
+    n "Wh.."
+
+    show rock happy:
+        ease 1.0 left
+
+    r "Our food!"
+
+    "He plops the food down at the table and they start to eat while Nate wonders about Rockhoppers past."
+
+######################################################################
+# Scene Where nate gets fucking beat up
+######################################################################
+    #Hey make sure to look this over I’m not really sure if this is in character at all but he just fucking goes crazy and almost kills these people so let me know if it’s any good.
+
+    scene bg bhilis back
+    with dissolve
+
+    n "I think this is a good short cut home..."
+
+    show nate worried at center
+    with easeinleft
+
+    n "Rockhopper?"
+
+    n "{i}{b} Shit I lost him {/i}{/b}"
+
+    whomst "What ya doin alone here kiddo?"
+
+    "A sketchy man comes from behind a dumpster"
+
+    show criminal1 at right
+    with easeinright    
+
+    n "W-Walking home...?"
+
+    whomst "All alone?"
+
+    show criminal2 at left
+    with easeinleft
+
+    n "N-No..."
+
+    whomst "Doesn’t look like it."
+
+    "One of them pulls out a knife."
+
+    n "L-Leave me alone."
+
+    whomst "Give us your money kid and we’ll leave you alone."
+
+    n "Fuck off!"
+
+    whomst "What the fuck did you just say?"
+
+    "He swings and makes a long cut on Nate’s chest. Nate staggers back and falls on the ground."
+
+    show expression "nate tears" as nate
+
+    whomst "What the FUCK did you just say?"
+
+    "They begin to kick Nate on the floor and Nate’s eyes begin to well in tears"
+
+    "A figure appears at the end of the street, unnoticed by the criminals, it comes closer."
+
+    whomst "Well are you going to give us your FUCKIGN money or do you want another scar?"
+
+    r "Leave Nate alone."
+
+    "He grabs the heads of one of the criminals and throws him against the wall"
+    
+    show criminal2:
+        ease 0.4 offscreenleft
+
+    n "Rockhopper..."
+
+    "The other one attempts to swing the knife at Rockhopper but is stopped as he grabs his arm."
+
+    whomst "What the-"
+
+    "Rockhopper breaks his arm and walks to Nate with the other criminal running away screaming."
+
+    show criminal1:
+        ease 0.4 offscreenright
+
+    show rock angry at left
+    with easeinleft
+
+    r "Hurt?"
+
+    n "A-A bit..."
+    
+    "He picks up Nate and puts him on his shoulders and hug his legs like a bag."
+    
+    show kurou normal at right
+    with easeinright
+
+    "The door of the back of the Bhili’s opens."
+
+    show expression "kurou surprised" as kurou
+
+    k "Woah holy shit I was gonna take a break."
+
+    n "H-Hey."
+    
+    k "Nate! Are you alright?"
+
+    n "Y-Yeah... Rockhopper here helped me."
+
+    k "So Rockhopper is the name is it?"
+
+    r "Yeah!"
+
+    k "You want me to call 911? But I’m on break and I’m not really forced to be nice to you anymore. {i} Chuckles {/i}"
+
+    k "I’m just jokin’! Get home safe cuties."
+
+    r "Of course Kangaroo!"
+
+######################################################################
+# Nate and Hops go home romance time
+######################################################################
+
+    scene bg black
+
+    "On the way home Nate passed out on Rockhopper."
+
+    scene bg house outside
+
+    "Nate wakes up and notices they’ve arrived at the house."
+
+    n "Argh...."
+
+    "He looks down as his shirt covered in blood."
+
+    r "Okay...?"
+
+    n "N-Not really... L-Lets go inside..."
+
+    scene bg house inside
+    with fade
+
+    show nate w normal at right
+
+    show rock normal at left
+
+    "Nate takes off his clothes and bandages himself up."
+    
+    n "Hey… Rockhopper…"
+
+    menu:
+
+        "Kiss him":
+            jump chapter2lust
+    
+        "I just wanted… to say thanks.":
+            jump chapter2true
+
+        "You didn't have to break his arm.":
+            jump chapter2bad
+
+#####################################################################
+# CHOICE?
+######################################################################
+
+label chapter2lust:
+    
+    $ pathNum += 1
+
+    show expression "nate w blush" as nate
+
+    n "H-Hey… C-Can you get down a bit?"
+
+    "Nate walks over to Rockhopper blushing."
+
+    "He closes his eyes and leans in for a kiss on the lips with Rockhopper."
+
+    show expression "rock blush" as rock
+
+    "Luckily, remembering something from those books, Rockhopper picks him up and places him on the table returning the kiss."
+
+    "Nate stops pulling back with a trail of slime connecting their loops together"
+
+    n "It's so slimey."
+
+    r "O-Oh?"
+
+    n "It tastes weird."
+
+    "Nate laughs and soon after Rockhopper joins him."
+
+    n "L-Let's go get some sleep okay?"
+
+    jump chapter2end
+
+label chapter2bad:
+    
+    $ pathNum -= 1
+
+    show expression "nate w angry" as nate
+
+    n "You didn't have to break his arm you know…"
+
+    r "But… he hurt Nate…"
+
+    n "Yeah he cut me, he didn't kill me. I didn't even need your help."
+
+    show expression "rock sad" as rock
+
+    "Rockhopper looks down in disappointment."
+
+    n "Look… I don't mean to be too harsh or anything just try not to go overboard okay…"
+
+    "He walks to Rockhopper to give him a hug."
+
+    n "Look lets go to sleep okay?"
+
+    jump chapter2end
+
+label chapter2true:
+
+    n "I just wanted to say thanks…"
+
+    r "Thank… for… what?"
+
+    n "For helping me out… from those people."
+
+    r "Why don't you hurt them?"
+
+    n "I don't like hurting other people… Even if they wanted to hurt me…"
+
+    r "That thinking can kill."
+
+    n "I know… but thanks again."
+
+    r "Anything for Nate!~"
+
+    "Rockhopper walks over to hug Nathaniel, squeezing against the bandages."
+
+    n "Too… hard… Ow fuck it stings."
+
+    r "Oops! Sorry Nate~"
+
+    "Nate giggles"
+
+    n "Its late, we should get some sleep."
+
+    jump chapter2end
+
+label chapter2end:
+
+    r "Okay~"
+
+    "He walks towards the bathroom."
+
+    n "You don't have to sleep theres Hops, here follow me."
+
+    scene bg bedroom
+    with moveinright
+        
+    r "Oooh!"
+
+    "He jumps on the bed, practically taking up the queen sized matress by just himself."
+
+    show rock happy at right
+    with easeinleft
+
+    pause 1.0
+
+    show natenormal at left
+    with easeinleft
+
+    n "Someone’s a big boy."
+
+    r "Aaahh~ So comfy!~"
+
+    r "So…"
+
+    "He falls asleep in an instant."
+
+    n "I guess that’s how I’d feel if I drifted in the ocean for months…"
+
+    n "{i}Yawns{/i} Time to sleep with him… in my bed… heh…"
+
+    "He crawls into bed with the little space he has and pulls over the blanket onto both of them."
+
+    n "Night Hops…"
+
+    "Nate wraps one arm around Rockhopper and then, unconsciously, Rockhopper hugs Nate in return."
+
+    scene bg black
+    with Fade(3.0, 3.0, 0.5)
+
+    "HAHA DICKS"
+    
+    
+         
+
     return
