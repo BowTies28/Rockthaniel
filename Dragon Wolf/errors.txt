@@ -2,20 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1241: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    with moveinright
-    ^
-
-File "game/script.rpy", line 1248: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    with easeinleft
-    ^
-
-File "game/script.rpy", line 1251: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    with easeinleft
-    ^
-
-File "game/script.rpy", line 1272: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    with Fade(3.0, 3.0, 0.5)
-    ^
+File "game/script.rpy", line 1497: expected ':' not found.
+    label chapter3restaurant
+                            ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919
